@@ -77,7 +77,7 @@ def mouse_path(path):
                 if intersect and not(index == 0 and move_index == len(moves) - 1):
                     return None
 
-    if coordinates[-1] != [0, 0]:
+    if coordinates[-1] != [0, 0] or coordinates[-2][0] == coordinates[1][0] or coordinates[-2][1] == coordinates[1][1]:
         return None
 
     # Computing area
